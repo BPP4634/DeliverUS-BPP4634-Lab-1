@@ -47,20 +47,8 @@ const loadModel = (sequelize, DataTypes) => {
         'temporarily closed'
       ]
     },
-    userId: {
-      allowNull: false,
-      type: DataTypes.INTEGER
-    },
-    createdAt: {
-      allowNull: false,
-      type: DataTypes.DATE,
-      defaultValue: new Date()
-    },
-    updatedAt: {
-      allowNull: false,
-      type: DataTypes.DATE,
-      defaultValue: new Date()
-    }
+    userId: DataTypes.INTEGER,
+    restaurantCategoryId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Restaurant'
